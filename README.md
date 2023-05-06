@@ -64,12 +64,19 @@ salida: [1, True]
 </tr>
 </table>
 </center>
+
+## Codigo del programa
+```ruby
+
+```
+
 # PUNTO 9
 9. Resolver el punto 7 del [taller 1](https://github.com/fegonzalez7/pdc_unal_clase8) usando operaciones con vectores.
 ## Codigo del programa
 ```ruby
 
 ```
+
 # PUNTO 10
 10. Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
 ## Codigo del programa
