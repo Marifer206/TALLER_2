@@ -4,7 +4,7 @@
 # Desarrollo de taller #2;   {Programación de computadores} :smile: :computer:
 
 # PUNTO 1 
-1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
+1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número. g
 ## Codigo del programa
 ```ruby
 numeros = []
