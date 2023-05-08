@@ -7,18 +7,52 @@
 1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
 ## Codigo del programa
 ```ruby
+numeros = []
+def separar_numero(x):
+    while x > 0:
+        numeros.append(x%10)
+        x = x // 10
+    numeros.reverse()
+    print(numeros)
 
+n = int(input("Ingrese el numero entero el cual quiera separar: "))
+separar_numero(n)
 ```
 # PUNTO 2
 2. Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de la decimal.
 ## Codigo del programa
 ```ruby
+import math
+from decimal import Decimal
 
+n = float(input("Ingrese el número del cual quiera saber su parte entera y su parte decimal: "))
+
+entero = math.trunc(n)
+decimal = n - entero
+
+print("La parte entera del número " + str(n) + " es " + str(entero) + " y su parte decimal es " + str(decimal))
 ```
 # PUNTO 3
 3. Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
 ## Codigo del programa
 ```ruby
+def invertir_numero(numero):
+    numero_invertido = 0
+    while numero > 0:
+        digito = numero % 10
+        numero_invertido = (numero_invertido * 10) + digito
+        numero //= 10
+    return numero_invertido
+
+n = int(input("Ingrese el primer número: "))
+m = int(input("Ingrese el segundo número: "))
+
+n_invertido = invertir_numero(n)
+
+if n_invertido == m:
+    print("Los números", n, "y", m, "son espejos.")
+else:
+    print("Los números", n, "y", m, "no son espejos.")
 
 ```
 # PUNTO 4
@@ -26,6 +60,31 @@
 $$cos(x) \approx cos(x,n) \approx \sum_{i=0}^{n} (-1)^i \frac{x^{2i}}{(2i)!}$$
 ## Codigo del programa
 ```ruby
+import math
+
+def aproximacion_coseno(x, n):
+    aproximacion = 0
+    for i in range(n):
+        termino = ((-1) ** i) * (x ** (2 * i)) / math.factorial(2 * i)
+        aproximacion += termino
+    return aproximacion
+
+x = float(input("Ingrese el valor de x: "))
+
+errores_deseados = [0.001, 0.1, 1, 10]
+
+for error in errores_deseados:
+    e = 0
+    while True:
+        e += 1
+        aproximacion = aproximacion_coseno(x, e)
+        error_porcentual = abs((aproximacion - math.cos(x)) / math.cos(x)) * 100
+        if error_porcentual <= error:
+            break
+    print("Aproximación: " + str(aproximacion))
+    print("Valor real: " + str(math.cos(x)))
+    print("Con un error del " + str(error) + "% se necesitan " + str(e) + " términos de la serie")
+    print("")
 
 ```
 # PUNTO 5
