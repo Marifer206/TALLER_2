@@ -18,6 +18,9 @@ def separar_numero(x):  # Se define una función llamada "separar_numero" que to
 n = int(input("Ingrese el numero entero el cual quiera separar: "))  # Se pide al usuario que ingrese un número entero y se almacena en la variable "n"
 separar_numero(n)  # Se llama a la función "separar_numero" con el número ingresado como argumento
 ```
+## DESCRIPCION 
+Este programa separa todos los digitos de un numero entero dado por medio de la funcion separar_numero y con el uso del bucle while para interar 
+
 # PUNTO 2
 2. Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de la decimal.
 ## Codigo del programa
@@ -31,6 +34,9 @@ decimal = n - entero  # Se resta la parte entera del número "n" a "n" para obte
 
 print("La parte entera del número " + str(n) + " es " + str(entero) + " y su parte decimal es " + str(decimal))  # Se imprime en la pantalla la parte entera y la parte decimal del número "n"
 ```
+## DESCRIPCION 
+Este programa separA la parte entera y la parte decimal de un numero flotante ingresado y devuelve o entrega estas dos partes
+
 # PUNTO 3
 3. Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
 ## Codigo del programa
@@ -54,6 +60,9 @@ else:
     print("Los números", n, "y", m, "no son espejos.")  # Si los números no son espejos, se imprime en la pantalla un mensaje indicando que los números no son espejos
 
 ```
+## DESCRIPCION 
+Este progama determinar si dos numeros ingresados son espejos por medio de la funcion invertir_numero, este codigo tiene dos variables las cuales son m y n, estas son igresadas y debe ser un numero entero
+
 # PUNTO 4
 4. Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. **nota:** use *math* para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
 $$cos(x) \approx cos(x,n) \approx \sum_{i=0}^{n} (-1)^i \frac{x^{2i}}{(2i)!}$$
@@ -85,6 +94,9 @@ for error in errores_deseados:  # Se utiliza un bucle "for" para iterar sobre lo
     print("Con un error del " + str(error) + "% se necesitan " + str(e) + " términos de la serie")  # Se imprime en la pantalla el error deseado, el número de términos de la serie necesarios para alcanzar el error deseado y un mensaje indicando que se ha alcanzado el error deseado
     print("")  # Se imprime una línea en blanco para separar las salidas de cada iteración del bucle "for"
 ```
+## DESCRIPCION
+El código es una implementación de la aproximación del coseno utilizando la serie de Taylor y se utiliza para determinar cuántos términos de la serie son necesarios para lograr una determinada precisión del resultado. El usuario ingresa el valor de "x" y una lista de errores deseados, y el código itera a través de cada uno de los errores deseados para determinar cuántos términos de la serie son necesarios para lograr esa precisión.
+
 # PUNTO 5
 5. Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
 ## Codigo del programa
@@ -118,6 +130,9 @@ if __name__ == "__main__":
     print("El Mínimo Común Múltiplo de", a, "y", b, "es:", mcm_recursivo(a, b))
     
 ```
+## DESCRIPCION
+El código proporcionado define funciones para calcular el Máximo Común Divisor (MCD) y el Mínimo Común Múltiplo (MCM) de dos números enteros, utilizando el algoritmo de Euclides para el MCD. Además, proporciona dos versiones para calcular el MCM: una iterativa y otra recursiva que utiliza la función de MCD definida anteriormente. El programa también solicita al usuario que ingrese dos números enteros y muestra el resultado del cálculo del MCM utilizando ambas versiones de la función..
+
 # PUNTO 6
 6. Desarrollar un programa que determine si en una lista no existen elementos repetidos.
 ## Codigo del programa
@@ -149,6 +164,15 @@ if repetidos:
 else:
     print('No existen elementos repetidos en la lista')
 ```
+## DESCRIPCION
+
+Este programa pide al usuario ingresar una lista de números enteros y busca elementos repetidos en ella.
+Si encuentra elementos repetidos, imprime un mensaje indicando que existen elementos repetidos.
+Si no encuentra elementos repetidos, imprime un mensaje indicando que no existen elementos repetidos.
+Primero, define una lista vacía y luego utiliza un bucle while para que el usuario ingrese elementos de la lista.
+Luego, utiliza dos bucles for para comparar cada elemento de la lista con los demás y determinar si hay elementos repetidos.
+Finalmente, imprime la lista y el resultado.
+
 # PUNTO 7
 7. Desarrollar un programa que determine si en una lista se encuentra
 una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
@@ -196,6 +220,8 @@ for cadena in lista:
 if not encontrado:
     print('No existe')
 ```
+## DESCRIPCION
+Este código pide al usuario que ingrese varias cadenas de caracteres hasta que escriba "fin". Luego, se define una función que cuenta el número de vocales en una cadena. A continuación, el programa recorre la lista de cadenas y para cada una de ellas, cuenta el número de vocales y si encuentra dos o más, imprime la cadena y el número de vocales. Si no encuentra ninguna cadena con dos o más vocales, imprime "No existe".
 # PUNTO 8
 8. Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista. **Ejemplo:**
 <center>
@@ -248,6 +274,8 @@ for elemento in lista1:
 # Imprimimos los elementos que están en la primera lista pero no en la segunda lista
 print("Los elementos que están en la primera lista pero no en la segunda lista son:", diferencia)
 ```
+## DESCRIPCION
+
 
 # PUNTO 9
 9. Resolver el punto 7 del [taller 1](https://github.com/fegonzalez7/pdc_unal_clase8) usando operaciones con vectores.
@@ -299,6 +327,8 @@ print(f"Los números en orden descendente son: {numeros_descendente}")
 print(f"El mayor número elevado al menor número es: {potencia}")
 print(f"La raíz cúbica del menor número es: {raiz_cubica}")
 ```
+## DESCRIPCION
+nota: las explicaciones estan en los comentarios del codigo
 
 # PUNTO 10
 10. Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
@@ -359,3 +389,6 @@ if es_magica:
 else:
     print("La matriz no es mágica")
 ```
+## DESCRIPCION
+nota: las explicaciones estan en los comentarios del codigo
+
